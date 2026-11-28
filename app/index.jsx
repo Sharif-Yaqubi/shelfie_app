@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Text, View, StyleSheet, Image } from 'react-native'
+import {Link} from 'expo-router'
 import Logo  from '../assets/images/logo.png'
  const index = () => {
     return (
@@ -11,6 +12,12 @@ import Logo  from '../assets/images/logo.png'
         <View style={styles.card}>
             <Text>Hello, this is a Card</Text>
         </View>
+        <Link href="/about" style={styles.link}>
+            <Text>Go to About Page</Text>
+        </Link>
+        <Link href="/contact" style={styles.link}>
+            <Text>Go to Contact Page</Text>
+        </Link>
       </View>
     )
   }
@@ -37,5 +44,11 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         width: 100,
         height: 100
+    },
+    link:{
+        fontSize:16,
+        color: 'blue',
+        marginVertical: 10,
+        borderBottomWidth:1
     }
 })
